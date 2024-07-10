@@ -1,0 +1,39 @@
+
+.contenidosContainer {
+    width: 100%;
+    text-align: center;
+    color: white;
+    
+}
+
+.contenido {
+    margin-bottom: 20px;
+    
+}
+
+.label {
+    display: flex;
+    width: 350px;
+    height: 60px;
+    margin-bottom: 10px;
+    
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    
+    
+}
+
+.card {
+    flex: 1 1 300px;
+    margin: 1px;
+    
+    
+    
+}
+

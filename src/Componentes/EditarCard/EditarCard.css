@@ -1,0 +1,95 @@
+/* Formulario.css */
+.tituloModal{
+    font-size: 50px;
+    color: #2271D1;
+}
+
+.label{
+  color: white;
+}
+
+.editarcard {
+  display: flex;
+  flex-direction: column;
+  width: 490px;
+  height: 640px;
+  background-color: #03122F;
+  padding: 30px 130px;
+  border-radius: 10px;
+  border-width: 3.5px; 
+  border-color: #6BD1FF; 
+  border-style: solid; 
+  }
+  
+  
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: white;
+    background-color: #03122F;
+    border-width: 2px; 
+  border-color: #2271D1; 
+  border-style: solid; 
+  }
+  
+  .form-group input[type="file"] {
+    padding: 0;
+    border-color: #2271D1;
+    border-width: 3px;
+    border-radius: 10px;
+    
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0px;
+    right: -50px;
+    background-color: #03122F;
+    
+  }
+  
+  .form-buttons button {
+    border: none;
+    cursor: pointer;
+    background-color: #03122F;
+  }
+  
+  .form-buttons button[type="button"] {
+    background-color: #03122F;
+
+  }
+
+  .botonx{
+    background-color:transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+ 
+ 
+  .botonx img {
+    display: flex;
+    max-width: 2em;
+    background-color: #03122F;
+    top: 20px;
+    right: 60px;
+  }
+  
+ 

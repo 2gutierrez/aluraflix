@@ -1,0 +1,29 @@
+.container-botones{
+    width: 52%;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-left: 45%;
+    padding-top: 32px;
+    align-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    
+    
+}
+
+.button{
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    
+}
+
+.button img {
+    display: block;
+}
+  
+    
