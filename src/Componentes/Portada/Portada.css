@@ -1,11 +1,14 @@
-.portada-container{
-    width: 100%;
-    height: 32%;
-    text-align: center;
+.portada {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Fallback color */
 }
 
-.banner-main{
-    width: 100%;
-    height: 32%
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-

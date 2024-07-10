@@ -1,12 +1,10 @@
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'http://localhost:3001', // Asegúrate de que la URL apunte a tu json-server en el puerto 3001
-});
+const API_URL = 'http://localhost:3001/videos';
 
 export const fetchVideos = async () => {
   try {
-    const response = await api.get('/videos');
+    const response = await axios.get(API_URL);
     return response.data;
   } catch (error) {
     console.error('Error fetching videos:', error);
@@ -14,9 +12,9 @@ export const fetchVideos = async () => {
   }
 };
 
-export const createVideo = async (video) => {
+export const createVideo = async (videoData) => {
   try {
-    const response = await api.post('/videos', video);
+    const response = await axios.post(API_URL, videoData);
     return response.data;
   } catch (error) {
     console.error('Error creating video:', error);
@@ -24,9 +22,9 @@ export const createVideo = async (video) => {
   }
 };
 
-export const updateVideo = async (video) => {
+export const updateVideo = async (videoData) => {
   try {
-    const response = await api.put(`/videos/${video.id}`, video);
+    const response = await axios.put(`${API_URL}/${videoData.id}`, videoData);
     return response.data;
   } catch (error) {
     console.error('Error updating video:', error);
@@ -36,9 +34,7 @@ export const updateVideo = async (video) => {
 
 export const deleteVideo = async (id) => {
   try {
-    console.log(`Deleting video with ID: ${id}`);
-    const response = await api.delete(`/videos/${id}`);
-    console.log('Delete response:', response);
+    const response = await axios.delete(`${API_URL}/${id}`);
     return response.data;
   } catch (error) {
     console.error('Error deleting video:', error);

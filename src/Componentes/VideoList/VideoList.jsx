@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { fetchVideos, updateVideo, deleteVideo } from 'api';
 import ModalEditar from "Componentes/ModalEditar/index"
-import Card from "Componentes/Card/index"
+import Card from '../Card';
+import './VideoList.css';
+import LabelFrontEnd from "Componentes/VideoList/Frontend.png"
+import LabelBackEnd from "Componentes/VideoList/backend.png"
+import LabelInovacion from "Componentes/VideoList/inovacion.png"
 
 const VideoList = () => {
   const [videos, setVideos] = useState({
@@ -43,18 +47,15 @@ const VideoList = () => {
   };
 
   const handleDelete = async (id) => {
-    console.log('Deleting video with id:', id);
     const result = await deleteVideo(id);
-    console.log('Delete result:', result);
-    if (result) {
-      const updatedVideos = {
-        frontend: videos.frontend.filter(video => video.id !== id),
-        backend: videos.backend.filter(video => video.id !== id),
-        innovacionGestion: videos.innovacionGestion.filter(video => video.id !== id),
-      };
-      setVideos(updatedVideos);
+    if (result !== null) {
+      setVideos(prevVideos => ({
+        frontend: prevVideos.frontend.filter(video => video.id !== id),
+        backend: prevVideos.backend.filter(video => video.id !== id),
+        innovacionGestion: prevVideos.innovacionGestion.filter(video => video.id !== id),
+      }));
     } else {
-      console.error('Failed to delete video');
+      alert('Error al eliminar el video');
     }
   };
 
@@ -68,51 +69,37 @@ const VideoList = () => {
   };
 
   return (
-    <div>
-      <h2>Frontend</h2>
-      <ul>
-        {videos.frontend.map(video => (
-          <li key={video.id}>
-            <Card
-              id={video.id}
-              capa={video.capa}
-              titulo={video.titulo}
-              clickEditarCard={() => clickEditarCard(video.id)} // Verifica que la función se pase correctamente
-              handleDelete={() => handleDelete(video.id)} // Verifica que la función se pase correctamente
-            />
-          </li>
-        ))}
-      </ul>
-
-      <h2>Backend</h2>
-      <ul>
-        {videos.backend.map(video => (
-          <li key={video.id}>
-            <Card
-              id={video.id}
-              capa={video.capa}
-              titulo={video.titulo}
-              clickEditarCard={() => clickEditarCard(video.id)} // Verifica que la función se pase correctamente
-              handleDelete={() => handleDelete(video.id)} // Verifica que la función se pase correctamente
-            />
-          </li>
-        ))}
-      </ul>
-
-      <h2>Innovación y Gestión</h2>
-      <ul>
-        {videos.innovacionGestion.map(video => (
-          <li key={video.id}>
-            <Card
-              id={video.id}
-              capa={video.capa}
-              titulo={video.titulo}
-              clickEditarCard={() => clickEditarCard(video.id)} // Verifica que la función se pase correctamente
-              handleDelete={() => handleDelete(video.id)} // Verifica que la función se pase correctamente
-            />
-          </li>
-        ))}
-      </ul>
+    <div className="videoList">
+      <div className="section frontend">
+        <img src={LabelFrontEnd} alt="Label Front End" />
+        <ul>
+          {videos.frontend.map(video => (
+            <li key={video.id}>
+              <Card {...video} clickEditarCard={clickEditarCard} handleDelete={handleDelete} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="section backend">
+      <img src={LabelBackEnd} alt="Label Back End" />
+        <ul>
+          {videos.backend.map(video => (
+            <li key={video.id}>
+              <Card {...video} clickEditarCard={clickEditarCard} handleDelete={handleDelete} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="section innovacionGestion">
+      <img src={LabelInovacion} alt="Label Inovacion" />
+        <ul>
+          {videos.innovacionGestion.map(video => (
+            <li key={video.id}>
+              <Card {...video} clickEditarCard={clickEditarCard} handleDelete={handleDelete} />
+            </li>
+          ))}
+        </ul>
+      </div>
 
       {editarcard && (
         <ModalEditar editarcard={editarcard} closeModal={closeModal} onSubmit={handleEdit} />
