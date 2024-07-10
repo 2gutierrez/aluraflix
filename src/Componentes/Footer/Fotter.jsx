@@ -1,9 +1,10 @@
 import "./Footer.css"
+import LogoMain from "Componentes/Footer/LogoMain.png"
 
 const Footer=()=>{
     return (
         <div className="footer-container">
-        <img className="logo-footer" src="/img/LogoMain.png" alt='logo alura'/>
+        <img className="LogoMain" src={LogoMain} alt='logo alura'/>
         </div>
     )
 }
