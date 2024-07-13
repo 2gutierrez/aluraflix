@@ -1,59 +1,61 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import styles from "./Contenidos.css";
-import Card from "../Card";
-import { fetchVideos } from "api";
+import Card from "../Card/Card";
+import { fetchVideos } from "Componentes/api/api"
+import { useOutletContext } from 'react-router-dom';
 
-const Contenidos = ({ clickEditarCard }) => {
-  const [videos, setVideos] = useState([]);
+const Contenidos = () => {
+    const { clickEditarCard, clickNuevoVideo } = useOutletContext();
+    const [videos, setVideos] = useState({
+        frontend: [],
+        backend: [],
+        innovacion: []
+    });
 
-  useEffect(() => {
-    const getVideos = async () => {
-      const allVideos = await fetchVideos();
-      console.log('allVideos in Contenidos:', allVideos); // Verifica que allVideos sea un array
-      if (Array.isArray(allVideos)) {
-        setVideos(allVideos);
-      } else {
-        console.error('Expected an array but received:', allVideos);
-      }
-    };
+    useEffect(() => {
+        const getVideos = async () => {
+            const allVideos = await fetchVideos();
+            console.log('All Videos:', allVideos);
+            const frontend = allVideos.filter(video => video.formacion === "Frontend");
+            const backend = allVideos.filter(video => video.formacion === "Backend");
+            const innovacion = allVideos.filter(video => video.formacion === "IyG");
 
-    getVideos();
-  }, []);
+            setVideos({ frontend, backend, innovacion });
+        };
 
-  const frontendVideos = videos.filter(video => video.formacion === "Frontend");
-  const backendVideos = videos.filter(video => video.formacion === "Backend");
-  const innovacionVideos = videos.filter(video => video.formacion === "IyG");
+        getVideos();
+    }, []);
 
-  return (
-    <div className="contenidosContainer">
-      <div className="contenido">
-        <img className="label" src="/img/Frontend.png" alt="label-frontend" />
-        <section className="cardContainer">
-          {frontendVideos.map(video => (
-            <Card {...video} key={video.id} clickEditarCard={clickEditarCard} />
-          ))}
-        </section>
-      </div>
+    return (
+        <div className="contenidosContainer">
+            <div className="contenido">
+                <img className="label" src="/img/Frontend.png" alt="label-frontend" />
+                <section className="cardContainer">
+                    {videos.frontend.map(video => (
+                        <Card {...video} key={video.id} clickEditarCard={clickEditarCard} />
+                    ))}
+                </section>
+            </div>
 
-      <div className="contenido">
-        <img className="label" src="/img/backend.png" alt="label-backend" />
-        <section className="cardContainer">
-          {backendVideos.map(video => (
-            <Card {...video} key={video.id} clickEditarCard={clickEditarCard} />
-          ))}
-        </section>
-      </div>
+            <div className="contenido">
+                <img className="label" src="/img/backend.png" alt="label-backend" />
+                <section className="cardContainer">
+                    {videos.backend.map(video => (
+                        <Card {...video} key={video.id} clickEditarCard={clickEditarCard} />
+                    ))}
+                </section>
+            </div>
 
-      <div className="contenido">
-        <img className="label" src="/img/inovacion.png" alt="label-inovacion" />
-        <section className="cardContainer">
-          {innovacionVideos.map(video => (
-            <Card {...video} key={video.id} clickEditarCard={clickEditarCard} />
-          ))}
-        </section>
-      </div>
-    </div>
-  );
+            <div className="contenido">
+                <img className="label" src="/img/inovacion.png" alt="label-inovacion" />
+                <section className="cardContainer">
+                    {videos.innovacion.map(video => (
+                        <Card {...video} key={video.id} clickEditarCard={clickEditarCard} />
+                    ))}
+                </section>
+            </div>
+        </div>
+    );
 };
 
 export default Contenidos;

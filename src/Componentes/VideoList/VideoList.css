@@ -28,3 +28,7 @@ ul {
   align-content: stretch;
   flex-direction: row;
 }
+
+.label{
+  margin-bottom: 15px;
+}

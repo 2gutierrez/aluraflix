@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './NuevoVideoForm.css';
+import './EditarCard.css';
 import BotonGuardar from './BotonGuardar.png';
 import BotonLimpiar from './BotonLimpiar.png';
 
-const NuevoVideoForm = ({ onSubmit, onClose }) => {
+const EditarCard = ({ onSubmit, onClose }) => {
   const [formValues, setFormValues] = useState({
     titulo: '',
     categoria: '',
@@ -37,9 +37,8 @@ const NuevoVideoForm = ({ onSubmit, onClose }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="nuevo-video-form">
-      <h1 className="titulo-modal">Nuevo Video</h1>
-        <p>Complete el formulario para crear una nueva tarjeta de video</p>
+    <form onSubmit={handleSubmit} className="editar-card-form">
+      <h1 className="titulo-modal">Editar Card</h1>
       <div className="form-group">
         <label htmlFor="titulo">Título</label>
         <input
@@ -108,4 +107,4 @@ const NuevoVideoForm = ({ onSubmit, onClose }) => {
   );
 };
 
-export default NuevoVideoForm;
+export default EditarCard;

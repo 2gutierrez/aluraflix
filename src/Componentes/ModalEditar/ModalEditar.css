@@ -1,0 +1,81 @@
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  
+  .dialog-estilizado {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #001f3f;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    width: 500px;
+    z-index: 20;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .editar-card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .titulo-modal {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #001f3f;
+    color: white;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-buttons img {
+    width: 150px;
+    height: 44px;
+  }
+  

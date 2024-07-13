@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import ButtonContainer from "Componentes/Header/ButtonContainer/ButtonContainer"
+import ButtonContainer from "Componentes/ButtonContainer/ButtonContainer"
 import logo from "./LogoMain.png"
 
 const Header = () => {

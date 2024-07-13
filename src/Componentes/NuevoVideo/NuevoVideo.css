@@ -1,39 +1,13 @@
-/* NuevoVideo.css */
-.nuevo-video-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Ajustar para que el contenido no se centre verticalmente */
-  min-height: 100vh;
-  background-color: #03122F;
-  color: white;
+.nuevo-video-container {
+  padding: 20px;
+  background-color: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.nuevo-video-form-container {
-  width: 100%;
-  background-color: #1E1E1E;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 35px;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-image-source: linear-gradient(to bottom, #00ADEF, #005682); /* Gradiente de arriba hacia abajo */
-  border-image-slice: 1;
-}
-
-.nuevo-video-header {
+.nuevo-video-container h1 {
   text-align: center;
   margin-bottom: 20px;
-  width: 100%;
-}
-
-.nuevo-video-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.nuevo-video-header p {
-  font-size: 1.25rem;
 }

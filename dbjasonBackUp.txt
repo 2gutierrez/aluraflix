@@ -1,0 +1,89 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "formacion": "Frontend",
+      "titulo": "¿Cuándo usar let, var y const?",
+      "capa": "./img/videos/FrontEnd/front1.webp",
+      "link": "https://www.youtube.com/watch?v=PztCEdIJITY"
+    },
+    {
+      "id": 2,
+      "formacion": "Frontend",
+      "titulo": "¿Qué es JavaScript?",
+      "capa": "./img/videos/FrontEnd/front2.webp",
+      "link": "https://www.youtube.com/watch?v=GJfOSoaXk4s"
+    },
+    {
+      "id": 3,
+      "formacion": "Frontend",
+      "titulo": "Equipo Front End",
+      "capa": "./img/videos/FrontEnd/front3.webp",
+      "link": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+    },
+    {
+      "id": 4,
+      "formacion": "Frontend",
+      "titulo": "Como aplicar Dark Mode en tu proyecto",
+      "capa": "./img/videos/FrontEnd/front4.webp",
+      "link": "https://www.youtube.com/watch?v=MxlxFhzGRV8"
+    },
+    {
+      "id": 5,
+      "formacion": "Backend",
+      "titulo": "Spring Framework. ¿Qué es?",
+      "capa": "./img/videos/BackEnd/back1.webp",
+      "link": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+    },
+    {
+      "id": 6,
+      "formacion": "Backend",
+      "titulo": "Simplificando tu código en Java: Conoce los enum",
+      "capa": "./img/videos/BackEnd/back2.webp",
+      "link": "https://www.youtube.com/watch?v=EoPvlE85XAQ"
+    },
+    {
+      "id": 7,
+      "formacion": "Backend",
+      "titulo": "La magia detrás de Java",
+      "capa": "./img/videos/BackEnd/back3.webp",
+      "link": "https://www.youtube.com/watch?v=GrEO8nZzyZM"
+    },
+    {
+      "id": 8,
+      "formacion": "Backend",
+      "titulo": "Backend",
+      "capa": "./img/videos/BackEnd/back4.webp",
+      "link": "https://www.youtube.com/watch?v=Z024LSCMqFk"
+    },
+    {
+      "id": 9,
+      "formacion": "IyG",
+      "titulo": "¿Qué son las Soft Skills?",
+      "capa": "./img/videos/IyG/IG1.webp",
+      "link": "https://www.youtube.com/watch?v=vhwspfvI52k"
+    },
+    {
+      "id": 10,
+      "formacion": "IyG",
+      "titulo": "7 Soft Skills más deseadas por las empresas",
+      "capa": "./img/videos/IyG/IG2.webp",
+      "link": "https://www.youtube.com/watch?v=YhR7Zp8NUzE"
+    },
+    {
+      "id": 11,
+      "formacion": "IyG",
+      "titulo": "¿Qué son las metodologias ágiles?",
+      "capa": "./img/videos/IyG/IG3.webp",
+      "link": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+    },
+    {
+      "id": 12,
+      "formacion": "IyG",
+      "titulo": "Scrum Master",
+      "capa": "./img/videos/IyG/IG4.webp",
+      "link": "https://www.youtube.com/watch?v=hamjv6G5shY"
+    }
+    
+  ]
+}
