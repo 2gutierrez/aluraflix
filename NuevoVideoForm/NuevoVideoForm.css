@@ -1,0 +1,95 @@
+.nuevo-video-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  margin: 60px;
+}
+
+.titulo-modal {
+  font-size: 54px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 15px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  background-color: #001f3f;
+  color: white;
+}
+
+.descripcion-container {
+  display: flex;
+  gap: 20px;
+}
+
+.descripcion-container .form-group {
+  flex: 1;
+}
+
+.descripcion-container textarea {
+  width: 50%;
+  height: 200px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.form-buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.form-buttons img {
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.form-buttons button.limpiar {
+  background-color: transparent;
+}
+
+.form-buttons button.limpiar:hover {
+  background-color: #5a6268;
+}
