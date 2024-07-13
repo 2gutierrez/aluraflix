@@ -93,3 +93,43 @@ p {
 .form-buttons button.limpiar:hover {
   background-color: #5a6268;
 }
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .nuevo-video-form {
+    margin: 20px;
+  }
+
+  .titulo-modal {
+    font-size: 36px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .descripcion-container textarea {
+    width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-modal {
+    font-size: 28px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+  }
+
+  .descripcion-container textarea {
+    height: 150px;
+  }
+}

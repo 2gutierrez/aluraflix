@@ -29,3 +29,33 @@ footer {
 main {
   padding: 20px;
 }
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  header, footer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .App {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer {
+    padding: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .App {
+    text-align: left;
+  }
+}
